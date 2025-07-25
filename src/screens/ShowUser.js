@@ -29,7 +29,7 @@ const ShowUser = () => {
     setNombre(usuario.nombre);
     setEdad(String(usuario.edad));
     setCorreo(usuario.correo);
-    navigation.navigate("AddUser", { user: usuario }); // <-- Aquí enviamos el objeto completo
+    navigation.navigate("AddUser", { user: usuario }); 
   };
 
   // Confirmación de eliminación

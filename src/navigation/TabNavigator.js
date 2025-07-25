@@ -3,13 +3,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Platform } from 'react-native';
 
-// Importando las pantallas
 import Home from '../screens/Home';
 import ShowUser from '../screens/ShowUser';
 import AddUser from '../screens/AddUser';
 
-
-//creando un objeto Tab utilizando createBottomTabNavigator de la libreria/dependencia instalada
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -17,13 +14,13 @@ const TabNavigator = () => {
 
 <Tab.Navigator
           screenOptions={({ route }) => ({
-            headerShown: false, // Oculta el header
-            tabBarActiveTintColor: '#2a2cacff', // Color de los íconos activos
-            tabBarInactiveTintColor: '#737bb9ff', // Color de los íconos inactivos
+            headerShown: false,
+            tabBarActiveTintColor: '#2a2cacff', 
+            tabBarInactiveTintColor: '#737bb9ff', 
             tabBarStyle: { backgroundColor: '#FFF', 
-              height: Platform.OS === 'ios' ? 80 : 60, // Estilo de la barra de pestañas, altura diferente para iOS y Android
-           borderTopWidth: 0 }, // Estilo de la barra de pestañas
-            tabBarIcon: ({ focused, color, size }) => { // Función que define el ícono de la pestaña
+              height: Platform.OS === 'ios' ? 80 : 60, 
+           borderTopWidth: 0 }, 
+            tabBarIcon: ({ focused, color, size }) => { 
               let iconName;
               if (route.name === 'Home') {
                 iconName = focused ? 'home' : 'home-outline';
